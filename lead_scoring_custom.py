@@ -1,6 +1,3 @@
-# Lead Scoring Analysis
-# Identify high-potential leads before they enter the sales pipeline
-
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split, StratifiedKFold, RandomizedSearchCV, GridSearchCV
@@ -15,9 +12,9 @@ import matplotlib.pyplot as plt
 # Load data
 df = pd.read_csv("../data/processed/cleaned_data.csv")
 
-# Create target variable
-# A lead is qualified if it moves past "Prospecting" stage
-# This includes Engaging, Won, or Lost - all show the lead warranted sales attention
+# Creating target variable
+# A lead will be qualified if it moves past "Prospecting" stage
+# So this includes Engaging, Won, or Lost - all show the lead warranted sales attention
 df["qualified_lead"] = (
     (df.get("deal_stage_ENGAGING", 0) == 1) |
     (df.get("deal_stage_WON", 0) == 1) |
@@ -26,7 +23,7 @@ df["qualified_lead"] = (
 
 TARGET = "qualified_lead"
 
-# Remove columns that would leak the answer
+# Remove any columns that would leak the answer
 temporal_cols = ['engage_date', 'close_date', 'engage_year', 'engage_month', 
                  'engage_dayofweek', 'days_to_close', 'closed_within_30d']
 outcome_cols = ['deal_stage_PROSPECTING', 'deal_stage_ENGAGING', 
@@ -34,10 +31,10 @@ outcome_cols = ['deal_stage_PROSPECTING', 'deal_stage_ENGAGING',
                 'has_close_date', 'close_value', 'close_value_log']
 remove_cols = temporal_cols + outcome_cols
 
-# Keep transformed features, drop raw versions
+# Keeping transformed features, droping raw versions
 raw_features = ['revenue', 'employees', 'sales_price']
 
-# Prepare training and test sets
+# Preparing training and test sets
 feature_cols = [c for c in df.columns if c not in remove_cols + raw_features + [TARGET]]
 X = df[feature_cols]
 y = df[TARGET]
@@ -100,7 +97,7 @@ xgb_model = XGBClassifier(
 xgb_probs, xgb_metrics = evaluate_classifier("XGBoost", xgb_model,
                                              X_train, y_train, X_test, y_test)
 
-# Find optimal threshold
+# Finding optimal threshold
 def find_optimal_threshold(y_true, probabilities):
     """find threshold that maximizes F1"""
     precision, recall, thresholds = precision_recall_curve(y_true, probabilities)
