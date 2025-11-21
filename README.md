@@ -2,6 +2,17 @@
 Welcome to the central repository for Team 2A! This guide will walk you through the process of contributing your code. The goal of this project is to give you hands-on experience with version control, collaboration, and the standard developer workflow using Git and GitHub.
 
 ---
+### 👥 **Team Members**
+| Name             | GitHub Handle | Contribution                                                             |
+|------------------|---------------|--------------------------------------------------------------------------|
+| Caitlyn Widjaja    | @caitlynw5 | Data exploration, visualization, model training, feature engineering, datavalidation           |
+| Jordan Ramirez   | @jramirez     | Data collection, exploratory data analysis (EDA), dataset documentation  |
+| Amina Hassan     | @aminahassan  | Data preprocessing, feature engineering, data validation                 |
+| Priya Mehta      | @pmehta       | Model selection, hyperparameter tuning, model training and optimization  |
+| Chris Park       | @chrispark    | Model evaluation, performance analysis, results interpretation           |
+
+---
+
 
 ## 1. Getting Started: Setting Up Your Local Environment
 
