@@ -1,4 +1,4 @@
-# Team2A
+# Salesforce Team2A
 Welcome to the central repository for Team 2A! This guide will walk you through the process of contributing your code. The goal of this project is to give you hands-on experience with version control, collaboration, and the standard developer workflow using Git and GitHub.
 
 ---
