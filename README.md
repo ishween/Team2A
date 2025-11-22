@@ -13,6 +13,16 @@ Welcome to the central repository for Team 2A! This guide will walk you through 
 
 ---
 
+## 🎯 **Project Highlights**
+
+- Developed a machine learning model using `[model type/technique]` to address `[challenge project task]`.
+- Achieved `[key metric or result]`, demonstrating `[value or impact]` for `[host company]`.
+- Generated actionable insights to inform business decisions at `[host company or stakeholders]`.
+- Implemented `[specific methodology]` to address industry constraints or expectations.
+
+---
+
+
 
 ## 1. Getting Started: Setting Up Your Local Environment
 
