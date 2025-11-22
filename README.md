@@ -24,17 +24,7 @@ Welcome to the central repository for Team 2A! This guide will walk you through 
 
 ## 👩🏽‍💻 **Setup and Installation**
 
-**Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
-
-* How to clone the repository
-* How to install dependencies
-* How to set up the environment
-* How to access the dataset(s)
-* How to run the notebook or scripts
-
-
-
-## 1. Getting Started: Setting Up Your Local Environment
+# 1. Getting Started: Setting Up Your Local Environment
 
 Since this is a private repository, you will **clone** it directly to your computer.
 
@@ -58,7 +48,7 @@ Since this is a private repository, you will **clone** it directly to your compu
 
 ---
 
-## 2. Making Your Contributions: The Branching Strategy
+# 2. Making Your Contributions: The Branching Strategy
 
 For this project, you will create a new branch for your work. This keeps your changes separate from the main project until they are ready to be reviewed.
 
@@ -81,7 +71,7 @@ For this project, you will create a new branch for your work. This keeps your ch
 
 ---
 
-## 3. Submitting Your Work: The Pull Request
+# 3. Submitting Your Work: The Pull Request
 
 Once you are finished with your work, you will push your branch to the central repository and open a Pull Request (PR). A PR is how you propose your changes to be merged into the main project.
 
@@ -104,7 +94,7 @@ Once you are finished with your work, you will push your branch to the central r
 
 ---
 
-## What Happens Next?
+# What Happens Next?
 
 The project maintainer will receive a notification about your pull request. They will review your code on your individual branch. Your work will not be merged into the `main` branch. Your `individual branch` will serve as your final submission.
 
