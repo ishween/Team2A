@@ -22,6 +22,16 @@ Welcome to the central repository for Team 2A! This guide will walk you through 
 
 ---
 
+## 👩🏽‍💻 **Setup and Installation**
+
+**Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
+
+* How to clone the repository
+* How to install dependencies
+* How to set up the environment
+* How to access the dataset(s)
+* How to run the notebook or scripts
+
 
 
 ## 1. Getting Started: Setting Up Your Local Environment
