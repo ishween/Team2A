@@ -6,11 +6,11 @@ Welcome to the central repository for Team 2A! This guide will walk you through 
 | Name             | GitHub Handle | Contribution                                                             |
 |------------------|---------------|--------------------------------------------------------------------------|
 | Caitlyn Widjaja    | @caitlynw5 | Data exploration, visualization, model training, feature engineering, datavalidation           |
-| Jordan Ramirez   | @jramirez     | Data collection, exploratory data analysis (EDA), dataset documentation  |
-| Amina Hassan     | @aminahassan  | Data preprocessing, feature engineering, data validation                 |
-| Priya Mehta      | @pmehta       | Model selection, hyperparameter tuning, model training and optimization  |
-| Chris Park       | @chrispark    | Model evaluation, performance analysis, results interpretation           |
-
+| Afifah Hadi   | @hadiafifah     | Data collection, exploratory data analysis (EDA), dataset documentation  |
+| Sai Wong     | @cywlol  | Data preprocessing, feature engineering, data validation                 |
+| Mariam Jammal     | @mjamm-inc      | Model selection, hyperparameter tuning, model training and optimization  |
+| Anusri Nagarajan       | @anusrinagarajan    | Model evaluation, performance analysis, results interpretation           |
+| Mya Barragan       | @myabarragan    | Model evaluation, performance analysis, results interpretation           |
 ---
 
 ## 🎯 **Project Highlights**
