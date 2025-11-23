@@ -15,14 +15,10 @@ Welcome to the central repository for Team 2A! This guide will walk you through 
 
 ## 🎯 **Project Highlights**
 
-- Developed a natural language transformation pipleline using ElasticNet regression, Random Forest, and Gradient Boosting classifiers to address comprhensive CRM sales optimization across account health scoring, lead qualification, and opportunity win prediction.
-- Achieved exceptional model performance across all objectives:
-  - Account Health Model -- (R² = 0.947, MAE = 4.89)
-  - Lead Scoring Model -- (PR-AUC = 0.997, ROC-AUC = 0.952, 95.4% accuracy)
-  - Opportunity Win Model -- (PR-AUC = 0.997, ROC-AUC = 0.952, 95.4% accuracy)
-  This demonstrates production ready predictive accuracy that exceeded project targets    R² ≥ 0.70)for Salesforce's data-driven sales optimization.
-- Generated actionable insights to inform business decisions for sales teams, account managers, and revenue operations at Salesforce .
-- Implemented advanced ML engineering practices including synthetic target generation with weighted feature construction, extensive feature engineering (70+ variables from 4 source tables), one-hot and label encoding for categorical variables, log transformations for skewed distributions, temporal feature extraction, stratified K-fold cross-validation (5 folds), RandomizedSearchCV + GridSearchCV hyperparameter optimization (50 iterations), and comprehensive data leakage prevention to address industry-standard constraints in CRM analytics including unlabeled data, severe class imbalance (6:1 and 3:1 ratios), multicollinearity, and temporal data splitting.
+- Developed an end-to-end machine learning and natural language transformation pipleline using ElasticNet regression, Random Forest, Gradient Boosting classifiers, and sentence transformers with vector embeddings to address comprhensive CRM sales optimization across account health scoring, lead qualification, and opportunity win prediction, and natural language data retrieval.
+- Achieved R² of 0.947 for account health prediction, PR-AUC of 0.997 for lead scoring, F1-score of 0.973 for opportunity win prediction, and semantic search capabilities over 8,800 opportunities, demonstrating production-ready performance across predictive and retrieval tasks for Salesforce CRM optimization and conversational analytics.
+- Generated actionable insights to inform business decisions at sales operations, account management, and revenue teams, including account prioritization strategies, lead qualification workflows, deal forecasting that captured 99.7% of winning opportunities, and natural language query interface enabling stakeholders to access CRM insights without SQL or technical expertise at Salesforce.
+- Implemented comprehensive data preprocessing with feature engineering (70+ features), synthetic target generation, stratified cross-validation, hyperparameter tuning, rigorous data leakage prevention, and sentence-to-embedding transformation with ChromaDB vector storage to address real-world CRM constraints including missing labels, severe class imbalance, temporal dependencies, and the need for non-technical stakeholder access to complex sales data.
 
 ---
 
@@ -52,54 +48,109 @@ Since this is a private repository, you will **clone** it directly to your compu
 
 ---
 
-# 2. Making Your Contributions: The Branching Strategy
+### 2. Install Dependencies
 
-For this project, you will create a new branch for your work. This keeps your changes separate from the main project until they are ready to be reviewed.
+  ```
+  pip install pandas numpy matplotlib seaborn scikit-learn xgboost
+  pip install sentence-transformers chromadb
+  pip install jupyter notebook ipykernel
 
-1.  **Create a new branch** using a descriptive name that includes your name. This is a crucial step for collaboration.
+  ```
+---
 
-    ```
-    git checkout -b your-name-2A
-    
-    ```
+### 3. Access the Dataset
+Datasets are inlcuded in the repo
 
-2.  **Make your code changes.** Do your work, add new files, and modify existing ones as needed.
+  ```
+  data/processed
 
-3.  **Add and commit your changes.** Once you've completed a logical piece of work, save your changes to your branch. Be sure to write a clear and concise commit message.
+  ```
+---
+### 4. Run the Notebooks
+Start Jupyter Notebook
 
-    ```
-    git add .
-    git commit -m "Add my solution to Problem 1"
-    
-    ```
+  ```
+  jupyter notebook
+
+  ```
+Execute the notebooks in order: account health, lead scoring, opportunity win, sentence transformer
+
+## 🏗️ **Project Overview**
+
+**Describe:**
+
+- How this project is connected to the Break Through Tech AI Program
+- Your AI Studio host company and the project objective and scope
+- The real-world significance of the problem and the potential impact of your work
 
 ---
 
-# 3. Submitting Your Work: The Pull Request
+## 📊 **Data Exploration**
 
-Once you are finished with your work, you will push your branch to the central repository and open a Pull Request (PR). A PR is how you propose your changes to be merged into the main project.
+**You might consider describing the following (as applicable):**
 
-1.  **Push your branch** to the central repository.
+* The dataset(s) used: origin, format, size, type of data
+* Data exploration and preprocessing approaches
+* Insights from your Exploratory Data Analysis (EDA)
+* Challenges and assumptions when working with the dataset(s)
 
-    ```
-    git push origin your-name-2A
-    
-    ```
+**Potential visualizations to include:**
 
-2.  **Open a Pull Request.** Go to the GitHub repository page in your browser. GitHub will likely show a banner at the top asking if you want to create a new PR for the branch you just pushed. Click on that. If not, go to the "Pull requests" tab and click "New pull request."
-
-3.  **Fill out the PR details.**
-
-    * Make sure the base branch is `main` (the default) and the compare branch is `your-name-2A`.
-
-    * Write a clear title and description. Explain what you've done and any challenges you faced. This helps the project maintainer understand your work.
-
-4.  **Create the pull request.** Your PR is now open and serves as your final submission!
+* Plots, charts, heatmaps, feature visualizations, sample dataset images
 
 ---
 
-# What Happens Next?
+## 🧠 **Model Development**
 
-The project maintainer will receive a notification about your pull request. They will review your code on your individual branch. Your work will not be merged into the `main` branch. Your `individual branch` will serve as your final submission.
+**You might consider describing the following (as applicable):**
 
-If you have any questions, please reach out to the project maintainer. Good luck!
+* Model(s) used (e.g., CNN with transfer learning, regression models)
+* Feature selection and Hyperparameter tuning strategies
+* Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
+
+
+---
+
+## 📈 **Results & Key Findings**
+
+**You might consider describing the following (as applicable):**
+
+* Performance metrics (e.g., Accuracy, F1 score, RMSE)
+* How your model performed
+* Insights from evaluating model fairness
+
+**Potential visualizations to include:**
+
+* Confusion matrix, precision-recall curve, feature importance plot, prediction distribution, outputs from fairness or explainability tools
+
+---
+
+## 🚀 **Next Steps**
+
+**You might consider addressing the following (as applicable):**
+
+* What are some of the limitations of your model?
+* What would you do differently with more time/resources?
+* What additional datasets or techniques would you explore?
+
+---
+
+## 📝 **License**
+
+If applicable, indicate how your project can be used by others by specifying and linking to an open source license type (e.g., MIT, Apache 2.0). Make sure your Challenge Advisor approves of the selected license type.
+
+**Example:**
+This project is licensed under the MIT License.
+
+---
+
+## 📄 **References** (Optional but encouraged)
+
+Cite relevant papers, articles, or resources that supported your project.
+
+---
+
+## 🙏 **Acknowledgements** (Optional but encouraged)
+
+Thank your Challenge Advisor, host company representatives, TA, and others who supported your project.
+
