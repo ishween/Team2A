@@ -28,7 +28,7 @@ Welcome to the central repository for Team 2A! This guide will walk you through 
 
 ## 👩🏽‍💻 **Setup and Installation**
 
-# 1. Getting Started: Setting Up Your Local Environment
+### 1. Getting Started: Setting Up Your Local Environment
 
 Since this is a private repository, you will **clone** it directly to your computer.
 
