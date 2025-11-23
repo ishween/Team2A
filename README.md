@@ -15,10 +15,14 @@ Welcome to the central repository for Team 2A! This guide will walk you through 
 
 ## 🎯 **Project Highlights**
 
-- Developed a machine learning model using `[model type/technique]` to address `[challenge project task]`.
-- Achieved `[key metric or result]`, demonstrating `[value or impact]` for `[host company]`.
-- Generated actionable insights to inform business decisions at `[host company or stakeholders]`.
-- Implemented `[specific methodology]` to address industry constraints or expectations.
+- Developed a natural language transformation pipleline using ElasticNet regression, Random Forest, and Gradient Boosting classifiers to address comprhensive CRM sales optimization across account health scoring, lead qualification, and opportunity win prediction.
+- Achieved exceptional model performance across all objectives:
+  - Account Health Model -- (R² = 0.947, MAE = 4.89)
+  - Lead Scoring Model -- (PR-AUC = 0.997, ROC-AUC = 0.952, 95.4% accuracy)
+  - Opportunity Win Model -- (PR-AUC = 0.997, ROC-AUC = 0.952, 95.4% accuracy)
+  This demonstrates production ready predictive accuracy that exceeded project targets    R² ≥ 0.70)for Salesforce's data-driven sales optimization.
+- Generated actionable insights to inform business decisions for sales teams, account managers, and revenue operations at Salesforce .
+- Implemented advanced ML engineering practices including synthetic target generation with weighted feature construction, extensive feature engineering (70+ variables from 4 source tables), one-hot and label encoding for categorical variables, log transformations for skewed distributions, temporal feature extraction, stratified K-fold cross-validation (5 folds), RandomizedSearchCV + GridSearchCV hyperparameter optimization (50 iterations), and comprehensive data leakage prevention to address industry-standard constraints in CRM analytics including unlabeled data, severe class imbalance (6:1 and 3:1 ratios), multicollinearity, and temporal data splitting.
 
 ---
 
