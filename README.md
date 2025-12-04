@@ -5,12 +5,12 @@ Welcome to the central repository for Team 2A! This guide will walk you through 
 ### 👥 **Team Members**
 | Name             | GitHub Handle | Contribution                                                             |
 |------------------|---------------|--------------------------------------------------------------------------|
-| Caitlyn Widjaja    | @caitlynw5 | Data exploration, visualization, model training, feature engineering, datavalidation           |
-| Afifah Hadi   | @hadiafifah     | Data collection, exploratory data analysis (EDA), dataset documentation  |
-| Sai Wong     | @cywlol  | Data preprocessing, feature engineering, data validation                 |
-| Mariam Jammal     | @mjamm-inc      | Model selection, hyperparameter tuning, model training and optimization  |
-| Anusri Nagarajan       | @anusrinagarajan    | Model evaluation, performance analysis, results interpretation           |
-| Mya Barragan       | @myabarragan    | Model evaluation, performance analysis, results interpretation           |
+| Caitlyn Widjaja    | @caitlynw5 | Opportunity Win Model Development          |
+| Afifah Hadi   | @hadiafifah     | Data Cleaning and Preprocessing, Feature Engineering, Lead Scoring Model Development, Gradio Interface Development |
+| Sai Wong     | @cywlol  | Data Cleaning and Preprocessing, Feature Engineering, Sentence Transformer Development, Ollama Model Integration |
+| Mariam Jammal     | @mjamm-inc      | Lead Scoring Model Development |
+| Anusri Nagarajan       | @anusrinagarajan    | Data Cleaning and Preprocessing, Feature Engineering, Account Health Scoring Model Development |
+| Mya Barragan       | @myabarragan    | Data Cleaning and Preprocessing, Feature Engineering, Opportunity Win Model Development |
 ---
 
 ## 🎯 **Project Highlights**
@@ -19,7 +19,7 @@ Welcome to the central repository for Team 2A! This guide will walk you through 
 - Achieved R² of 0.947 for account health prediction, PR-AUC of 0.997 for lead scoring, F1-score of 0.973 for opportunity win prediction, and semantic search capabilities over 8,800 opportunities, demonstrating production-ready performance across predictive and retrieval tasks for Salesforce CRM optimization and conversational analytics.
 - Generated actionable insights to inform business decisions at sales operations, account management, and revenue teams, including account prioritization strategies, lead qualification workflows, deal forecasting that captured 99.7% of winning opportunities, and natural language query interface enabling stakeholders to access CRM insights without SQL or technical expertise at Salesforce.
 - Implemented comprehensive data preprocessing with feature engineering (70+ features), synthetic target generation, stratified cross-validation, hyperparameter tuning, rigorous data leakage prevention, and sentence-to-embedding transformation with ChromaDB vector storage to address real-world CRM constraints including missing labels, severe class imbalance, temporal dependencies, and the need for non-technical stakeholder access to complex sales data.
-- Built a local chatbot experience with Ollama and Gradio to deliver semantic search and conversational Q&A over CRM data with lightweight deployment.
+- Integrated a local LLM workflow using Ollama with a Gradio frontend to unify predictive models, semantic search, and natural language reasoning into a single conversational CRM assistant, enabling real time query handling, context aware retrieval over ChromaDB embeddings, and an accessible interface for non technical stakeholders to interact with lead scores, win predictions, and account health insights without navigating notebooks or backend pipelines.
 
 ---
 
@@ -44,19 +44,23 @@ Since this is a private repository, you will **clone** it directly to your compu
 
     ```
     cd Team2A
-    
     ```
 
 ---
 
 ### 2. Install Dependencies
+Python dependencies:
 
   ```
-  pip install pandas numpy matplotlib seaborn scikit-learn xgboost
-  pip install sentence-transformers chromadb
-  pip install jupyter notebook ipykernel
-
+  pip install pandas numpy matplotlib seaborn scikit-learn xgboost sentence-transformers chromadb jupyter notebook ipykernel gradio
   ```
+Ollama installation
+
+1. Download Ollama from: https://ollama.com/download
+2. Pull model to be used:
+```
+ollama pull llama3
+```
 ---
 
 ### 3. Access the Dataset
@@ -72,7 +76,7 @@ Start Jupyter Notebook
   ```
   jupyter notebook
   ```
-Execute the notebooks in order: account health, lead scoring, opportunity win, sentence transformer
+Execute the notebooks in order: account health, lead scoring, opportunity win, sentence transformer, and then agents.ipynb inside the agents folder
 
 ## 🏗️ **Project Overview**
 
@@ -108,10 +112,12 @@ Deliverables:
 - Reproducible code and documentation
 
 **Impact**
-Sales teams waste 50%+ of their time on unqualified leads and discover at-risk accounts only after they've churned, costing companies millions annually. Our CRM Intelligence Assistant combines predictive analytics with conversational AI to deliver $1.5M+ in productivity savings through 95.4% accurate lead scoring, $2.5M+ in retained revenue via proactive account health monitoring (R² = 0.947), and 99.7% recall on deal predictions for accurate forecasting. By making AI insights accessible through natural language queries—reducing time-to-insight by 80-90%—this solution democratizes data-driven decision making, enabling sales teams to close 15-20% more deals and transforming reactive CRM systems into proactive intelligence assistants accessible to everyone, regardless of technical expertise.
+Sales teams waste 60%+ of their time on unqualified leads and discover at-risk accounts only after they've churned, costing companies millions annually. Our CRM Intelligence Assistant combines predictive analytics with conversational AI to deliver $1.5M+ in productivity savings through 95.4% accurate lead scoring, $2.5M+ in retained revenue via proactive account health monitoring (R² = 0.947), and 99.7% recall on deal predictions for accurate forecasting. By making AI insights accessible through natural language queries—reducing time-to-insight by 80-90%—this solution democratizes data-driven decision making, enabling sales teams to close 15-20% more deals and transforming reactive CRM systems into proactive intelligence assistants accessible to everyone, regardless of technical expertise.
 
 ---
 
 ## 🙏 **Acknowledgements**
 
-Thank your Challenge Advisor, host company representatives, TA, and others who supported your project.
+We would like to sincerely thank Ishween Kaur, our Challenge Advisor, for her expertise, guidance, and consistent support throughout this project.
+We are also grateful to Leah Dsouza, our AI Studio Coach, for always being willing to help and generously sharing her knowledge whenever we needed it.
+
