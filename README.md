@@ -105,7 +105,7 @@ Smart CRM Helper transforms Salesforce from a passive data repository into an ac
 ## 📊 Data Exploration
 
 ### Dataset Description
-
+https://www.kaggle.com/datasets/innocentmfa/crm-sales-opportunities 
 - Source: Salesforce CRM data  
 - Size: Approximately 8,800 sales opportunities  
 - Structure: Four merged tables including accounts, products, sales pipeline, and sales teams  
