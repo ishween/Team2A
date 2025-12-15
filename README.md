@@ -109,7 +109,6 @@ Smart CRM Helper transforms Salesforce from a passive data repository into an ac
 - Source: Salesforce CRM data  
 - Size: Approximately 8,800 sales opportunities  
 - Structure: Four merged tables including accounts, products, sales pipeline, and sales teams  
-- Timeframe: 2016 to 2017 historical data  
 
 ### Data Preparation
 
@@ -123,7 +122,16 @@ Key preprocessing steps included:
 
 - Revenue, recency, and engagement metrics showed the strongest correlation with account outcomes  
 - Severe class imbalance required careful metric selection and validation strategies  
-- Time-based splits were necessary to ensure temporal generalization  
+- Time-based splits were necessary to ensure temporal generalization
+- Distribution of closed vs. non-closed deals highlights significant class imbalance, motivating the use of F1 score and recall-focused evaluation.
+- Revenue scales non-linearly with company size, motivating log transformations for revenue and employee count.
+- Strong correlations between revenue and employee-related features informed feature selection and regularization strategies.
+- Pre-model feature correlations guided feature selection for the opportunity win prediction model.
+<img width="449" height="378" alt="Screenshot 2025-12-15 at 3 08 31 PM" src="https://github.com/user-attachments/assets/cf37e5eb-b373-43a2-8737-4a536728aaae" />
+<img width="497" height="374" alt="Screenshot 2025-12-15 at 3 08 13 PM" src="https://github.com/user-attachments/assets/a205f0af-3ff9-4d38-829e-d9b9f1406536" />
+<img width="400" height="315" alt="Screenshot 2025-12-15 at 3 08 07 PM" src="https://github.com/user-attachments/assets/fc91f8ea-8067-49a4-945f-1d6d142ee630" />
+<img width="1089" height="647" alt="Screenshot 2025-12-15 at 3 13 17 PM" src="https://github.com/user-attachments/assets/ef7c74bb-1a89-49d1-b55e-c55d197d11c3" />
+
 
 Annotated visualizations, including feature importance plots and confusion matrices, are included within the notebooks.
 
@@ -136,6 +144,7 @@ Annotated visualizations, including feature importance plots and confusion matri
 - **Lead Scoring:** Random Forest was selected for its ability to capture non-linear interactions while maintaining strong precision.
 - **Opportunity Win Prediction:** Gradient Boosting provided the best balance of accuracy, recall, and robustness.
 - **Account Health Scoring:** ElasticNet handled correlated features and enabled interpretable weighting of business drivers.
+<img width="193" height="301" alt="Screenshot 2025-12-15 at 3 06 48 PM" src="https://github.com/user-attachments/assets/bd7615b5-31b2-491d-a211-59792bd2ff92" />
 
 ### Training and Evaluation
 
@@ -151,8 +160,8 @@ Annotated visualizations, including feature importance plots and confusion matri
 | Model | Key Metrics |
 |---|---|
 | Lead Scoring | Approximately 94 percent accuracy |
-| Opportunity Win Prediction | Approximately 96 percent accuracy, 97.3 percent F1 score, 99.7 percent of wins identified |
-| Account Health Scoring | R² of 0.9466, time-based R² of 0.9324 |
+| Opportunity Win Prediction | Approximately 96 percent accuracy, 97.3 percent F1 score, 99.7 percent of wins identified <img width="404" height="333" alt="Screenshot 2025-12-15 at 3 01 27 PM" src="https://github.com/user-attachments/assets/64901e21-5310-4b85-a4b6-a6f05e691899" /> |
+| Account Health Scoring | R² of 0.9466, time-based R² of 0.9324 <img width="270" height="257" alt="Screenshot 2025-12-15 at 3 03 27 PM" src="https://github.com/user-attachments/assets/28d446df-0c4c-41f2-84be-23eec18a4c66" /> |
 
 These results exceeded baseline expectations and demonstrated readiness for real-world deployment.
 
