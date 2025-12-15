@@ -1,28 +1,32 @@
-# Salesforce Team2A
-Welcome to the central repository for Team 2A! This guide will walk you through the process of contributing your code. The goal of this project is to give you hands-on experience with version control, collaboration, and the standard developer workflow using Git and GitHub.
+# Smart CRM Helper  
+### AI Assistant for Salesforce Sales Teams  
+**Break Through Tech AI Studio | Host Company: Salesforce**
 
----
-### 👥 **Team Members**
-| Name             | GitHub Handle | Contribution                                                             |
-|------------------|---------------|--------------------------------------------------------------------------|
-| Caitlyn Widjaja    | @caitlynw5 | Opportunity Win Model Development          |
-| Afifah Hadi   | @hadiafifah     | Data Cleaning and Preprocessing, Feature Engineering, Lead Scoring Model Development, Gradio Interface Development |
-| Sai Wong     | @cywlol  | Data Cleaning and Preprocessing, Feature Engineering, Sentence Transformer Development, Ollama Model Integration |
-| Mariam Jammal     | @mjamm-inc      | Lead Scoring Model Development |
-| Anusri Nagarajan       | @anusrinagarajan    | Data Cleaning and Preprocessing, Feature Engineering, Account Health Scoring Model Development |
-| Mya Barragan       | @myabarragan    | Data Cleaning and Preprocessing, Feature Engineering, Opportunity Win Model Development |
----
-
-## 🎯 **Project Highlights**
-
-- Developed an end-to-end machine learning and natural language transformation pipleline using ElasticNet regression, Random Forest, Gradient Boosting classifiers, and sentence transformers with vector embeddings to address comprhensive CRM sales optimization across account health scoring, lead qualification, and opportunity win prediction, and natural language data retrieval.
-- Achieved R² of 0.947 for account health prediction, PR-AUC of 0.997 for lead scoring, F1-score of 0.973 for opportunity win prediction, and semantic search capabilities over 8,800 opportunities, demonstrating production-ready performance across predictive and retrieval tasks for Salesforce CRM optimization and conversational analytics.
-- Generated actionable insights to inform business decisions at sales operations, account management, and revenue teams, including account prioritization strategies, lead qualification workflows, deal forecasting that captured 99.7% of winning opportunities, and natural language query interface enabling stakeholders to access CRM insights without SQL or technical expertise at Salesforce.
-- Implemented comprehensive data preprocessing with feature engineering (70+ features), synthetic target generation, stratified cross-validation, hyperparameter tuning, rigorous data leakage prevention, and sentence-to-embedding transformation with ChromaDB vector storage to address real-world CRM constraints including missing labels, severe class imbalance, temporal dependencies, and the need for non-technical stakeholder access to complex sales data.
-- Integrated a local LLM workflow using Ollama with a Gradio frontend to unify predictive models, semantic search, and natural language reasoning into a single conversational CRM assistant, enabling real time query handling, context aware retrieval over ChromaDB embeddings, and an accessible interface for non technical stakeholders to interact with lead scores, win predictions, and account health insights without navigating notebooks or backend pipelines.
+Smart CRM Helper is an intelligent conversational AI assistant built for Salesforce sales teams to reduce manual CRM work, surface high-value opportunities, and enable data-driven decision making through predictive analytics and natural language interaction.
 
 ---
 
+## 👥 Team Members
+
+| Name | GitHub Handle | Contribution |
+|---|---|---|
+| Afifah Hadi | @hadiafifah | Data cleaning and preprocessing, feature engineering, lead scoring model, Gradio interface |
+| Sai Wong | @cywlol | Sentence transformers, ChromaDB integration, Ollama model integration |
+| Caitlyn Widjaja | @caitlynw5 | Opportunity win prediction modeling |
+| Mariam Jammal | @mjamm-inc | Lead scoring model development |
+| Anusri Nagarajan | @anusrinagarajan | Account health scoring model |
+| Mya Barragan | @myabarragan | Opportunity win prediction modeling |
+
+---
+
+## 🎯 Project Highlights
+
+- Built three supervised machine learning models for lead scoring, opportunity win prediction, and account health scoring using Random Forest, Gradient Boosting, and ElasticNet.
+- Achieved strong performance across tasks, including approximately 94 percent accuracy for lead scoring, approximately 96 percent accuracy and a 97.3 percent F1 score for opportunity win prediction, and an R² of 0.9466 for account health scoring.
+- Designed a conversational AI workflow using sentence transformers, ChromaDB, Ollama, and Gradio to enable natural language CRM queries.
+- Delivered measurable business value by reducing manual data search time and improving sales prioritization and retention outcomes.
+
+---
 ## 👩🏽‍💻 **Setup and Installation**
 
 ### 1. Getting Started: Setting Up Your Local Environment
@@ -78,46 +82,131 @@ Start Jupyter Notebook
   ```
 Execute the notebooks in order: account health, lead scoring, opportunity win, sentence transformer, and then agents.ipynb inside the agents folder
 
-## 🏗️ **Project Overview**
 
-This project was completed as part of the Break Through Tech AI Program, a workforce development initiative designed to provide underrepresented students with hands-on machine learning and AI experience. The program bridges the gap between academic learning and industry practice by partnering students with real companies to solve authentic business problems.
+## 🏗 Project Overview
 
-**Host Company:** Salesforce
-**Industry:** Customer Relationship Management (CRM) / Enterprise Software
-Company Context: Salesforce is the world's leading CRM platform, helping businesses manage customer relationships, sales pipelines, and marketing campaigns. With millions of users worldwide, Salesforce processes vast amounts of sales data daily.
+This project was completed as part of the **Break Through Tech AI Studio**, a workforce development program that partners students with industry companies to solve real business problems using machine learning and AI.
 
-**Project Object and Scope**
-Our team is building a CRM Intelligence Assistant, an internal tool that helps sales and marketing teams work smarter with their data. Using large language models, predictive analytics, and NLP, the assistant uncovers patterns, predicts opportunities, and makes advanced AI insights accessible through natural language queries—no technical expertise required.This intelligent assistant transforms traditional CRM systems from passive data repositories into active decision-support tools that:
+**Host Company:** Salesforce  
+**Industry:** Customer Relationship Management (CRM)
 
-Proactively identify at-risk accounts before they churn
-Automatically qualify incoming leads to maximize sales efficiency
-Predict deal outcomes with high accuracy for better resource allocation
-Answer natural language questions like "Which accounts in the healthcare sector are most likely to close this quarter?" without requiring SQL knowledge
-The goal is to democratize data-driven decision making across the entire organization, from frontline sales reps to C-suite executives.
+Sales teams spend a significant portion of their time manually searching CRM systems, prioritizing leads, and identifying at-risk accounts. This leads to lost opportunities, inefficient workflows, and reactive decision making.
 
-**Specific Goals:**
-Account Health Scoring: Predict account health scores to identify at-risk customers and prioritize high-value accounts for proactive engagement
-Lead Scoring: Automatically qualify leads to help sales teams focus efforts on prospects most likely to convert
-Opportunity Win Prediction: Forecast deal outcomes to improve revenue forecasting and resource allocation
-Natural Language Interface: Enable non-technical stakeholders to query CRM data using natural language through semantic search and retrieval-augmented generation (RAG)
+Smart CRM Helper transforms Salesforce from a passive data repository into an active decision-support system by:
 
-**Project Scope:**
-Dataset: 8,800 sales opportunities across 4 merged tables (accounts, products, sales pipeline, sales teams)
-Timeframe: 2016-2017 historical sales data
-Deliverables:
-- 3 production-ready ML models (regression + 2 classifiers)
-- 1 RAG/NLP system for semantic search with sentence transformers and ChromaDB
-- Comprehensive data preprocessing pipeline with feature engineering
-- Model evaluation reports with business metrics
-- Reproducible code and documentation
-
-**Impact**
-Sales teams waste 60%+ of their time on unqualified leads and discover at-risk accounts only after they've churned, costing companies millions annually. Our CRM Intelligence Assistant combines predictive analytics with conversational AI to deliver $1.5M+ in productivity savings through 95.4% accurate lead scoring, $2.5M+ in retained revenue via proactive account health monitoring (R² = 0.947), and 99.7% recall on deal predictions for accurate forecasting. By making AI insights accessible through natural language queries—reducing time-to-insight by 80-90%—this solution democratizes data-driven decision making, enabling sales teams to close 15-20% more deals and transforming reactive CRM systems into proactive intelligence assistants accessible to everyone, regardless of technical expertise.
+- Automatically scoring and ranking leads  
+- Predicting opportunity win probabilities  
+- Identifying at-risk and high-value accounts  
+- Allowing users to ask natural language questions such as:  
+  *Which healthcare accounts are likely to close this quarter?*
 
 ---
 
-## 🙏 **Acknowledgements**
+## 📊 Data Exploration
 
-We would like to sincerely thank Ishween Kaur, our Challenge Advisor, for her expertise, guidance, and consistent support throughout this project.
-We are also grateful to Leah Dsouza, our AI Studio Coach, for always being willing to help and generously sharing her knowledge whenever we needed it.
+### Dataset Description
+https://www.kaggle.com/datasets/innocentmfa/crm-sales-opportunities 
+- Source: Salesforce CRM data  
+- Size: Approximately 8,800 sales opportunities  
+- Structure: Four merged tables including accounts, products, sales pipeline, and sales teams  
 
+### Data Preparation
+
+Key preprocessing steps included:
+- Handling missing values and duplicate records  
+- Feature engineering for engagement, recency, and performance metrics  
+- Standardization and encoding of categorical variables  
+- Correlation analysis to prevent multicollinearity and data leakage  
+
+### EDA Insights
+
+- Revenue, recency, and engagement metrics showed the strongest correlation with account outcomes  
+- Severe class imbalance required careful metric selection and validation strategies  
+- Time-based splits were necessary to ensure temporal generalization
+- Distribution of closed vs. non-closed deals highlights significant class imbalance, motivating the use of F1 score and recall-focused evaluation.
+<img width="400" height="315" alt="Screenshot 2025-12-15 at 3 08 07 PM" src="https://github.com/user-attachments/assets/fc91f8ea-8067-49a4-945f-1d6d142ee630" />
+
+- Revenue scales non-linearly with company size, motivating log transformations for revenue and employee count.
+<img width="497" height="374" alt="Screenshot 2025-12-15 at 3 08 13 PM" src="https://github.com/user-attachments/assets/a205f0af-3ff9-4d38-829e-d9b9f1406536" />
+
+- Strong correlations between revenue and employee-related features informed feature selection and regularization strategies.
+<img width="449" height="378" alt="Screenshot 2025-12-15 at 3 08 31 PM" src="https://github.com/user-attachments/assets/cf37e5eb-b373-43a2-8737-4a536728aaae" />
+
+- Pre-model feature correlations guided feature selection for the opportunity win prediction model.
+<img width="1089" height="647" alt="Screenshot 2025-12-15 at 3 13 17 PM" src="https://github.com/user-attachments/assets/ef7c74bb-1a89-49d1-b55e-c55d197d11c3" />  
+
+
+Annotated visualizations, including feature importance plots and confusion matrices, are included within the notebooks.
+
+---
+
+## 🧠 Model Development
+
+### Model Selection Rationale
+
+- **Lead Scoring:** Random Forest was selected for its ability to capture non-linear interactions while maintaining strong precision.
+- **Opportunity Win Prediction:** Gradient Boosting provided the best balance of accuracy, recall, and robustness.
+- **Account Health Scoring:** ElasticNet handled correlated features and enabled interpretable weighting of business drivers.
+<img width="193" height="301" alt="Screenshot 2025-12-15 at 3 06 48 PM" src="https://github.com/user-attachments/assets/bd7615b5-31b2-491d-a211-59792bd2ff92" />
+
+### Training and Evaluation
+
+- Stratified cross-validation for classification tasks  
+- 80/20 train-test splits  
+- Time-based validation for regression modeling  
+- Metrics included Accuracy, Precision, Recall, F1 Score, ROC AUC, and R²  
+
+---
+
+## 📈 Results and Key Findings
+
+| Model | Key Metrics |
+|---|---|
+| Lead Scoring | Approximately 94 percent accuracy |
+| Opportunity Win Prediction | Approximately 96 percent accuracy, 97.3 percent F1 score, 99.7 percent of wins identified <img width="404" height="333" alt="Screenshot 2025-12-15 at 3 01 27 PM" src="https://github.com/user-attachments/assets/64901e21-5310-4b85-a4b6-a6f05e691899" /> |
+| Account Health Scoring | R² of 0.9466, time-based R² of 0.9324 <img width="270" height="257" alt="Screenshot 2025-12-15 at 3 03 27 PM" src="https://github.com/user-attachments/assets/28d446df-0c4c-41f2-84be-23eec18a4c66" /> |
+
+These results exceeded baseline expectations and demonstrated readiness for real-world deployment.
+
+---
+
+## 🧩 Code Highlights
+
+- `lead_scoring.ipynb`: Feature engineering and Random Forest training pipeline  
+- `opportunity_win.ipynb`: Gradient Boosting model with leakage prevention  
+- `account_health.ipynb`: Synthetic target construction and ElasticNet regression  
+- `sentence_transformer.ipynb`: Embedding generation and ChromaDB vector storage  
+- `agents.ipynb`: Agentic routing and Gradio conversational interface  
+
+---
+
+## 🧠 Discussion and Reflection
+
+**What worked well:**
+- Clear separation of predictive tasks  
+- Strong alignment between business objectives and model outputs  
+- Effective integration of NLP with traditional machine learning  
+
+**Challenges:**
+- Lack of ground truth labels for account health required synthetic target design  
+- Class imbalance demanded careful evaluation strategy  
+- Deployment constraints limited real-time integration  
+
+---
+
+## 🚀 Next Steps
+
+- Add richer explanatory visualizations and outputs  
+- Develop an interactive dashboard or web application  
+
+---
+
+## 📝 License
+
+This project was completed for educational purposes as part of Break Through Tech AI Studio. No open-source license is currently applied.
+
+---
+
+## 🙏 Acknowledgements
+
+We thank **Ishween Kaur**, Challenge Advisor, and **Leah Dsouza**, AI Studio Coach, for their guidance and support throughout this project.
